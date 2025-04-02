@@ -1,0 +1,12 @@
+name: Test Case 2 - 1 Number
+on: [push]
+jobs:
+  test_one:
+    name: Output Number
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Run python script
+      run: |
+        python find_lowest_number.py test_data/test3_input.txt output3.txt
+        diff output3.txt test_data/test3_expected.txt
