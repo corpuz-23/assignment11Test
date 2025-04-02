@@ -4,7 +4,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: action/checkout@v4
+    - uses: action/checkout@v3
     - name: Run Test Case 1
       run: |
         python find_lowest_number.py test_data/test1_input.txt output1.txt
